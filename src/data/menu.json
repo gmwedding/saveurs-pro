@@ -1,5 +1,5 @@
 [
-  { "id": 1,  "name": "Crepe Nutella / Manjar / Miel", "category": "Crepes Dulces", "price": 9.50,  "emoji": "🥞", "description": "Crepe rellena con Nutella, manjar blanco, miel o fudge a elección." },
+  { "id": 1,  "name": "Crepe Nutella / Manjar / Miel", "category": "Crepes Dulces", "price": 9.50,  "emoji": "🥞", "popular": true, "description": "Crepe rellena con Nutella, manjar blanco, miel o fudge a elección." },
   { "id": 2,  "name": "Crepe con Frutas",               "category": "Crepes Dulces", "price": 11.50, "emoji": "🥞", "description": "Crepe dulce más plátano, fresa, mango o arándanos (2 frutas a elección)." },
   { "id": 3,  "name": "Crepe con Helado",               "category": "Crepes Dulces", "price": 15.00, "emoji": "🥞", "description": "Crepe completa con frutas y helado artesanal. Nuestra favorita." },
   { "id": 4,  "name": "Crepe Jamón y Queso",            "category": "Crepes Salados","price": 12.00, "emoji": "🫓", "description": "Crepe salada rellena de jamón y queso fundido." },
@@ -25,7 +25,7 @@
   { "id": 24, "name": "Empanada Casera",                "category": "Sandwichs",     "price": 6.00,  "emoji": "🥟", "description": "Empanada casera de carne o pollo, hecha con masa artesanal." },
   { "id": 25, "name": "Café",                           "category": "Bebidas",       "price": 5.00,  "emoji": "☕", "description": "Café negro clásico, preparado al momento." },
   { "id": 26, "name": "Café con Leche",                 "category": "Bebidas",       "price": 6.00,  "emoji": "☕", "description": "Café suave con leche, perfecto para el desayuno." },
-  { "id": 27, "name": "Capuchino",                      "category": "Bebidas",       "price": 7.50,  "emoji": "☕", "description": "Capuchino cremoso con espuma de leche al estilo europeo." },
+  { "id": 27, "name": "Capuchino",                      "category": "Bebidas",       "price": 7.50,  "emoji": "☕", "popular": true, "description": "Capuchino cremoso con espuma de leche al estilo europeo." },
   { "id": 28, "name": "Chocolate Caliente",             "category": "Bebidas",       "price": 8.00,  "emoji": "🍫", "description": "Chocolate caliente espeso y cremoso, perfecto para el frío." },
   { "id": 29, "name": "Té / Manzanilla / Anís",         "category": "Bebidas",       "price": 3.50,  "emoji": "🍵", "description": "Infusión a elección: té, manzanilla o anís. Suave y relajante." },
   { "id": 30, "name": "Tizana de Frutas",               "category": "Bebidas",       "price": 4.00,  "emoji": "🫖", "description": "Tizana de frutas rojas, durazno o moras. Aromática y reconfortante." },

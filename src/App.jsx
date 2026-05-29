@@ -1,6 +1,7 @@
 import SEO from './components/layout/SEO.jsx';
 import Navbar from './components/layout/Navbar.jsx';
 import HeroSection from './components/sections/HeroSection.jsx';
+import PopularSection from './components/sections/PopularSection.jsx';
 import MenuSection from './components/sections/MenuSection.jsx';
 import CartDrawer from './components/ui/CartDrawer.jsx';
 import ProductModal from './components/ui/ProductModal.jsx';
@@ -17,6 +18,7 @@ export default function App() {
       <ProductModal />
       <main>
         <HeroSection />
+        <PopularSection />
         <MenuSection />
       </main>
       <footer
@@ -29,12 +31,26 @@ export default function App() {
         >
           {clientData.name}
         </span>
-        <span
-          className="text-[9px] tracking-[0.25em] uppercase"
-          style={{ color: '#8A9DC0', fontStyle: 'italic', ...SERIF }}
-        >
-          {clientData.instagram}
-        </span>
+        {clientData.instagram && (
+          <a
+            href={`https://instagram.com/${clientData.instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[9px] tracking-[0.25em] uppercase"
+            style={{ color: '#8A9DC0', fontStyle: 'italic', ...SERIF, textDecoration: 'none' }}
+          >
+            @{clientData.instagram}
+          </a>
+        )}
+        {clientData.email && (
+          <a
+            href={`mailto:${clientData.email}`}
+            className="text-[9px] tracking-[0.25em]"
+            style={{ color: '#8A9DC0', textDecoration: 'none' }}
+          >
+            {clientData.email}
+          </a>
+        )}
         <div className="flex items-center gap-3 mt-3">
           <div className="h-px w-10" style={{ backgroundColor: 'rgba(236,28,35,0.3)' }} />
           <span className="text-[10px] tracking-widest" style={{ color: '#6B84B8' }}>

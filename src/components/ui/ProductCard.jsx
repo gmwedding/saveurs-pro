@@ -19,12 +19,10 @@ export default function ProductCard({ product }) {
   const addItem = useCartStore((s) => s.addItem);
   const updateQty = useCartStore((s) => s.updateQty);
   const buildShareUrl = useCartStore((s) => s.buildShareUrl);
-  const favoriteId = useCartStore((s) => s.getFavoriteId());
   const openProduct = useCartStore((s) => s.openProduct);
 
   const cartItem = items.find((i) => i.id === product.id);
   const qty = cartItem?.qty ?? 0;
-  const isFavorite = favoriteId === product.id;
 
   const handleShare = (e) => {
     e.stopPropagation();
@@ -48,14 +46,6 @@ export default function ProductCard({ product }) {
         style={{ height: '110px', backgroundColor: '#EEF2F8', borderBottom: '1px solid #DDDDE8' }}
       >
         {product.emoji}
-        {isFavorite && (
-          <div
-            className="absolute top-2 left-2 flex items-center gap-1 px-2 py-0.5 text-[9px] tracking-widest uppercase"
-            style={{ backgroundColor: '#EC1C23', color: '#FFFFFF' }}
-          >
-            ✦ fav
-          </div>
-        )}
         <button
           onClick={handleShare}
           title="Compartir"

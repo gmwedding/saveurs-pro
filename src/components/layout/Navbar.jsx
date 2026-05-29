@@ -20,12 +20,15 @@ export default function Navbar() {
           {clientData.name}
         </span>
         {clientData.instagram && (
-          <span
+          <a
+            href={`https://instagram.com/${clientData.instagram}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[9px] tracking-[0.22em] uppercase"
-            style={{ color: 'rgba(255,255,255,0.5)', ...SERIF, fontStyle: 'italic' }}
+            style={{ color: 'rgba(255,255,255,0.5)', ...SERIF, fontStyle: 'italic', textDecoration: 'none' }}
           >
-            {clientData.instagram}
-          </span>
+            @{clientData.instagram}
+          </a>
         )}
       </div>
 

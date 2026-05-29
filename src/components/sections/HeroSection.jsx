@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { useCartStore } from '../../store/useCartStore.js';
 import clientData from '../../data/client.json';
 
 const SERIF = { fontFamily: '"Cormorant Garamond", serif' };
 
 export default function HeroSection() {
-  const openCart = useCartStore((s) => s.openCart);
+  const scrollToMenu = () =>
+    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <section
@@ -42,7 +42,7 @@ export default function HeroSection() {
           whileHover={{ backgroundColor: '#1C3D79', color: '#FFFFFF' }}
           whileTap={{ scale: 0.96 }}
           transition={{ duration: 0.15 }}
-          onClick={openCart}
+          onClick={scrollToMenu}
           className="mt-2 px-10 py-3.5 text-[11px] tracking-[0.25em] uppercase font-bold"
           style={{ border: '2px solid #1C3D79', color: '#1C3D79', backgroundColor: 'transparent' }}
         >
@@ -59,6 +59,26 @@ export default function HeroSection() {
             <span className="text-[10px] tracking-widest uppercase" style={{ color: '#9A9A9A' }}>
               🕐 {clientData.hours}
             </span>
+          )}
+          {clientData.instagram && (
+            <a
+              href={`https://instagram.com/${clientData.instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] tracking-widest uppercase"
+              style={{ color: '#9A9A9A', textDecoration: 'none' }}
+            >
+              📸 @{clientData.instagram}
+            </a>
+          )}
+          {clientData.email && (
+            <a
+              href={`mailto:${clientData.email}`}
+              className="text-[10px] tracking-widest"
+              style={{ color: '#9A9A9A', textDecoration: 'none' }}
+            >
+              ✉️ {clientData.email}
+            </a>
           )}
         </div>
       </motion.div>
