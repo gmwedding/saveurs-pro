@@ -64,11 +64,7 @@ export const useCartStore = create(
       buildWhatsAppUrl: () => {
         get().recordOrder();
         const items = get().items;
-        const total = get().getTotal();
-        const lines = items.map(
-          (i) => `${i.emoji} *${i.name}* × ${i.qty}  —  ${currency}${(i.price * i.qty).toFixed(2)}`
-        );
-        const sep = '━━━━━━━━━━━━━━━━━━━━━';
+        const lines = items.map((i) => `${i.emoji} *${i.name}* × ${i.qty}`);
         const message = [
           `¡Hola, ${clientData.name}! 👋`,
           '',
@@ -76,11 +72,7 @@ export const useCartStore = create(
           '',
           ...lines,
           '',
-          sep,
-          `🧾 *Total: ${currency}${total.toFixed(2)}*`,
-          sep,
-          '',
-          '¿Me pueden confirmar el pedido? ¡Muchas gracias! 😊',
+          '¿Me pueden confirmar? ¡Muchas gracias! 😊',
         ].join('\n');
         return `https://wa.me/${clientData.whatsapp}?text=${encodeURIComponent(message)}`;
       },

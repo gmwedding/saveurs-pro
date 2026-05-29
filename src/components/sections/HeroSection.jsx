@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logo from '../../assets/logo.png';
 import clientData from '../../data/client.json';
 
 const SERIF = { fontFamily: '"Cormorant Garamond", serif' };
@@ -18,12 +19,12 @@ export default function HeroSection() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
         className="flex flex-col items-center gap-6 max-w-xl"
       >
-        <h1
-          className="font-light leading-none tracking-widest uppercase"
-          style={{ ...SERIF, fontSize: 'clamp(3.5rem, 13vw, 7.5rem)', color: '#0D1B3E' }}
-        >
-          {clientData.name}
-        </h1>
+        <img
+          src={logo}
+          alt={clientData.name}
+          style={{ width: '220px', maxWidth: '60vw' }}
+          draggable={false}
+        />
 
         <div className="flex items-center gap-3 w-full max-w-xs">
           <div className="flex-1 h-px" style={{ backgroundColor: '#DDDDE8' }} />
