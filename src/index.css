@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0D1B3E;
+  --color-brand-white: #FFFFFF;
+  --color-brand-cream: #F5F3EE;
+  --color-brand-accent: #EC1C23;
+  --color-brand-accent-deep: #1C3D79;
+  --color-brand-muted: #9A9A9A;
+  --font-family-display: "Cormorant Garamond", serif;
+  --font-family-sans: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0D1B3E;
+  font-family: "Nunito", sans-serif;
+}
