@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import clientData from './src/data/client.json';
 
 export default defineConfig({
+  base: '/saveurs-pro/',
   plugins: [
     tailwindcss(),
     react(),
